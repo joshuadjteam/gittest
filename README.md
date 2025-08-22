@@ -52,7 +52,7 @@ sudo apt-get install google-chrome-stable
 
 echo Now, you will need to set-up a new account, the username for this account is "user" and will have sudo privilages
 
-sudo adduser 
+sudo adduser user
 
 sudo usermod -aG sudo user
 
