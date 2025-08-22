@@ -28,71 +28,11 @@ Welcome I'm your host Joshua from DarCodr and im gonna tell you how to get a fre
 
 5. Run this command before working on the others
 
-sudo apt update -y && sudo apt upgrade -y
+curl -O https://github.com/joshuadjteam/gittest/releases/download/setup/setup.sh
 
----Then Copy and enter these...---
+chmod +x setup.sh
 
-    
-
-    sudo apt install xfce4 && xfce4-goodies
-
-    sudo apt install gnome-tweaks
-
-    sudo apt-get update
-
-    sudo apt-get install dbus-x11
-
-    sudo apt-get update
-
-    sudo apt-get install --reinstall dbus
-
-    wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
-
-    sudo apt install ./chrome-remote-desktop_current_amd64.deb -y
-
-    sudo apt install -f
-
-    sudo apt install ./chrome-remote-desktop_current_amd64.deb -y
-
-    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-
-    sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-
-    sudo apt-get update
-
-    sudo apt-get install google-chrome-stable
-
-    sudo install -d -m 0755 /etc/apt/keyrings
-
-    wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
-
-    gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); if($0 == "35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3") print "\nThe key fingerprint matches ("$0").\n"; else print "\nVerification failed: the fingerprint ("$0") does not match the expected one.\n"}'
-
-    echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
-
-    echo '
-    Package: *
-    Pin: origin packages.mozilla.org
-    Pin-Priority: 1000
-    ' | sudo tee /etc/apt/preferences.d/mozilla
-
-    sudo apt-get update && sudo apt-get install firefox
-
-    echo Now, you will need to set-up a new account, the username for this account is "user" and will have sudo privilages
-
-    sudo adduser user
-
-    sudo usermod -aG sudo user
-
-    su - user
-
-    #Visit https://remotedesktop.google.com/headless until you get to "Set up a new computer" and copy the Debian Linux code and run it
-
-    curl -O https://github.com/joshuadjteam/gittest/releases/download/finishing-touches.sh/info.sh
-
-    chmod +x info.sh
-
-    ./info.sh
+./setup.sh
 
 # Support the creator
 
