@@ -88,7 +88,11 @@ sudo apt update -y && sudo apt upgrade -y
 
     #Visit https://remotedesktop.google.com/headless until you get to "Set up a new computer" and copy the Debian Linux code and run it
 
-    
+    curl -O https://github.com/joshuadjteam/gittest/releases/download/finishing-touches.sh/info.sh
+
+    chmod +x info.sh
+
+    ./info.sh
 
 # Support the creator
 
