@@ -26,45 +26,47 @@ Welcome I'm your host Joshua from DarCodr and im gonna tell you how to get a fre
 
 4. Create and open it in VS Code
 
-5. Run the following commands
+5. Run this command before working on the others
 
 sudo apt update -y && sudo apt upgrade -y
 
-sudo apt install xfce4 && xfce4-goodies
+---Then Copy and enter these...---
 
-sudo apt install gnome-tweaks
+    sudo apt install xfce4 && xfce4-goodies
 
-sudo apt-get update
+    sudo apt install gnome-tweaks
 
-sudo apt-get install dbus-x11
+    sudo apt-get update
 
-sudo apt-get update
+    sudo apt-get install dbus-x11
 
-sudo apt-get install --reinstall dbus
+    sudo apt-get update
 
-wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
+    sudo apt-get install --reinstall dbus
 
-sudo apt install ./chrome-remote-desktop_current_amd64.deb -y
+    wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 
-sudo apt install -f
+    sudo apt install ./chrome-remote-desktop_current_amd64.deb -y
 
-sudo apt install ./chrome-remote-desktop_current_amd64.deb -y
+    sudo apt install -f
 
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+    sudo apt install ./chrome-remote-desktop_current_amd64.deb -y
 
-sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
+    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 
-sudo apt-get update
+    sudo sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
 
-sudo apt-get install google-chrome-stable
+    sudo apt-get update
 
-sudo install -d -m 0755 /etc/apt/keyrings
+    sudo apt-get install google-chrome-stable
 
-wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
+    sudo install -d -m 0755 /etc/apt/keyrings
 
-gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); if($0 == "35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3") print "\nThe key fingerprint matches ("$0").\n"; else print "\nVerification failed: the fingerprint ("$0") does not match the expected one.\n"}'
+    wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
 
-echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
+    gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); if($0 == "35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3") print "\nThe key fingerprint matches ("$0").\n"; else print "\nVerification failed: the fingerprint ("$0") does not match the expected one.\n"}'
+
+    echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
 
     echo '
     Package: *
