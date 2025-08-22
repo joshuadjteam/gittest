@@ -34,6 +34,14 @@ sudo apt install xfce4 && xfce4-goodies
 
 sudo apt install gnome-tweaks
 
+sudo apt-get update
+
+sudo apt-get install dbus-x11
+
+sudo apt-get update
+
+sudo apt-get install --reinstall dbus
+
 wget https://dl.google.com/linux/direct/chrome-remote-desktop_current_amd64.deb
 
 sudo apt install ./chrome-remote-desktop_current_amd64.deb -y
