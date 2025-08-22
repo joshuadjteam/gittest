@@ -28,10 +28,16 @@ Welcome I'm your host Joshua from DarCodr and im gonna tell you how to get a fre
 
 5. Run this command before working on the others
 
+       sudo apt-get update
+
+       sudo apt-get install dos2unix -y
+
        curl -O https://github.com/joshuadjteam/gittest/releases/download/setup/setup.sh
 
        chmod +x setup.sh
-  
+
+       dos2unix ./setup.sh
+
        ./setup.sh
 
 # Support the creator
