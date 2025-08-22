@@ -32,6 +32,8 @@ sudo apt update -y && sudo apt upgrade -y
 
 ---Then Copy and enter these...---
 
+    
+
     sudo apt install xfce4 && xfce4-goodies
 
     sudo apt install gnome-tweaks
@@ -74,19 +76,19 @@ sudo apt update -y && sudo apt upgrade -y
     Pin-Priority: 1000
     ' | sudo tee /etc/apt/preferences.d/mozilla
 
-sudo apt-get update && sudo apt-get install firefox
+    sudo apt-get update && sudo apt-get install firefox
 
-echo Now, you will need to set-up a new account, the username for this account is "user" and will have sudo privilages
+    echo Now, you will need to set-up a new account, the username for this account is "user" and will have sudo privilages
 
-sudo adduser user
+    sudo adduser user
 
-sudo usermod -aG sudo user
+    sudo usermod -aG sudo user
 
-su - user
+    su - user
 
-#Visit https://remotedesktop.google.com/headless until you get to "Set up a new computer" and copy the Debian Linux code and run it
+    #Visit https://remotedesktop.google.com/headless until you get to "Set up a new computer" and copy the Debian Linux code and run it
 
-echo Your GitHub VPS is now ready!!!
+    
 
 # Support the creator
 
